@@ -1,3 +1,8 @@
+function out(str) {
+    var $out = $('#out');
+    $out.text($out.text() + str + '\n');
+}
+
 function data() {
   var sin = [],
       cos = [];
@@ -41,4 +46,3 @@ nv.addGraph(function() {
 
   return chart;
 });
-
