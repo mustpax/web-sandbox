@@ -25,7 +25,11 @@ jQuery(function() {
         // "data" refers to whatever results the call returns, right?
         // [Mustafa] Yes. jQuery will parse the data for you.
         success: function(data) {
-            console.log(data);
+            var visits = $.cookie('visits') || '0';
+            visits = parseInt(visits);
+            $('#visits').text('Visits: ' + visits);
+            $.cookie('visits', visits + 1);
+
             if (data.total) {
                 // You have to iterate over each 'issue' you get back from the API
                 // .each works like a for loop in other languages
