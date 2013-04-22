@@ -100,7 +100,7 @@ function chart(d) {
 }
 
 $(function() {
-    d3.csv('history.csv',
+    d3.csv('tmp/history.csv',
             function(data) {
                 chart(formatData(data));
             });
